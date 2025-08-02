@@ -1,8 +1,11 @@
 site_name: Superscale Documentation
 site_description: Comprehensive SaaS platform for managing and optimizing your digital products
-site_url: https://your-username.github.io/ss-docs/
-repo_url: https://github.com/your-username/ss-docs
-repo_name: your-username/ss-docs
+site_url: https://drinkredwine.github.io/ss-docs/
+repo_url: https://github.com/drinkredwine/ss-docs
+repo_name: drinkredwine/ss-docs
+
+# Set docs directory to root since markdown files are in root
+docs_dir: '.'
 
 theme:
   name: material
