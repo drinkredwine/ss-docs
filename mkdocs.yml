@@ -1,0 +1,158 @@
+site_name: Superscale Documentation
+site_description: Comprehensive SaaS platform for managing and optimizing your digital products
+site_url: https://your-username.github.io/ss-docs/
+repo_url: https://github.com/your-username/ss-docs
+repo_name: your-username/ss-docs
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: README.md
+    - Glossary: glossary.md
+    - Branding Guidelines: branding-guidelines.md
+  - SuperAI:
+    - Overview: super-ai/README.md
+    - Agents: super-ai/agents.md
+    - Chat Interface: super-ai/chat-interface.md
+    - File Management: super-ai/file-management.md
+    - Integrations: super-ai/integrations.md
+    - Workflows: super-ai/workflows.md
+  - Marketing Hub:
+    - Overview: marketing-hub/README.md
+    - UA Summary: marketing-hub/ua-summary.md
+    - Budget by Channel: marketing-hub/budget-by-channel.md
+    - Cohorts Performance: marketing-hub/cohorts-performance.md
+    - Data Explorer: marketing-hub/data-explorer.md
+    - Success Criteria: marketing-hub/success-criteria-report.md
+    - Business Summary:
+      - Overview: marketing-hub/business-summary/README.md
+      - UA Factor Details: marketing-hub/business-summary/ua-factor-details.md
+    - Detailed Analysis:
+      - Overview: marketing-hub/detailed-analysis/README.md
+      - Adset Analysis: marketing-hub/detailed-analysis/adset-analysis.md
+      - Breakeven Analysis: marketing-hub/detailed-analysis/breakeven-analysis.md
+      - Campaigns Analysis: marketing-hub/detailed-analysis/campaigns-analysis.md
+      - Cohorts Comparison: marketing-hub/detailed-analysis/cohorts-comparison.md
+      - Geo Analysis: marketing-hub/detailed-analysis/geo-analysis.md
+      - Platforms Analysis: marketing-hub/detailed-analysis/platforms-analysis.md
+      - UA Channels Analysis: marketing-hub/detailed-analysis/ua-channels-analysis.md
+    - Predictions:
+      - Overview: marketing-hub/predictions/README.md
+      - Daily: marketing-hub/predictions/daily.md
+      - Weekly: marketing-hub/predictions/weekly.md
+    - Reports:
+      - Overview: marketing-hub/reports/README.md
+  - Product Hub:
+    - Overview: product-hub/README.md
+    - Tutorial: product-hub/tutorial.md
+    - Daily Activity: product-hub/daily-activity.md
+    - Cohort Activity: product-hub/cohort-activity.md
+    - Currency Flow: product-hub/currency-flow-virtual-currencies.md
+    - Monetization:
+      - Overview: product-hub/monetization-overview.md
+      - In-App Purchases: product-hub/monetization-iap.md
+      - Ads: product-hub/monetization-ads.md
+    - Game Features:
+      - Battle Pass: product-hub/game-features-battle-pass.md
+      - Match Overview: product-hub/game-features-match-overview.md
+    - Payer Segments:
+      - Statistics: product-hub/payer-segments-statistics.md
+      - Movements: product-hub/payer-segments-movements.md
+    - Technical Performance:
+      - Multiplayer: product-hub/technical-performance-multiplayer.md
+  - Data Health:
+    - Overview: data-health/README.md
+    - Pipeline Health:
+      - Overall Status: data-health/pipeline-health-overall-status.md
+      - Dashboard Tables: data-health/pipeline-health-dashboard-tables.md
+      - Country VAT: data-health/pipeline-health-country-vat.md
+      - Currency Conversion: data-health/pipeline-health-currency-conversion.md
+      - Lost Ad Mediation: data-health/pipeline-health-lost-ad-mediation.md
+      - Predictions Transformation: data-health/pipeline-health-predictions-transformation.md
+      - Restricted Transformation: data-health/pipeline-health-restricted-transformation.md
+      - ROAS Benchmarks: data-health/pipeline-health-roas-benchmarks.md
+      - SKAn Transformation: data-health/pipeline-health-skan-transformation.md
+    - Marketing Data:
+      - MMP Ad Networks Health: data-health/marketing-data-mmp-ad-networks-health.md
+      - MMP Ad Networks Trends: data-health/marketing-data-mmp-ad-networks-trends.md
+      - MMP Stores Mediation: data-health/marketing-data-mmp-stores-mediation.md
+  - Data Core:
+    - Overview: data-core/README.md
+    - Pipeline Overview: data-core/pipeline-overview.md
+    - Pipeline Designer: data-core/pipeline-designer.md
+    - Pipeline Execution: data-core/pipeline-execution.md
+    - Pipeline Templates: data-core/pipeline-templates.md
+    - Run History: data-core/run-history.md
+    - Scheduling & Triggers: data-core/scheduling-triggers.md
+    - Task Management: data-core/task-management.md
+    - Performance Optimization: data-core/performance-optimization.md
+    - Error Handling: data-core/error-handling.md
+    - Execution Monitoring: data-core/execution-monitoring.md
+    - Conditional Logic: data-core/conditional-logic.md
+    - Platform Actions: data-core/platform-actions.md
+    - Script Automation: data-core/script-automation.md
+    - SQL Operations: data-core/sql-operations.md
+    - Import/Export Operations: data-core/import-export-operations.md
+    - External Connectors: data-core/external-connectors.md
+    - Integration Configuration: data-core/integration-configuration.md
+    - Integrations Overview: data-core/integrations-overview.md
+    - Webhook Management: data-core/webhook-management.md
+    - Security & Permissions: data-core/security-permissions.md
+  - Business:
+    - Landing Page: landing-page-website.md
+    - Marketing Positioning: marketing-positioning.md
+    - Sales Pitch: sales-pitch.md
+    - VC Investor Pitch: vc-investor-pitch.md
+    - Superscale Analysis: superscale-analysis.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username/ss-docs
