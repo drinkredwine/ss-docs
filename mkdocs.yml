@@ -4,8 +4,8 @@ site_url: https://drinkredwine.github.io/ss-docs/
 repo_url: https://github.com/drinkredwine/ss-docs
 repo_name: drinkredwine/ss-docs
 
-# Set docs directory to root since markdown files are in root
-docs_dir: '.'
+# Standard docs directory structure
+docs_dir: docs
 
 theme:
   name: material
@@ -57,7 +57,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-    - Overview: README.md
     - Glossary: glossary.md
     - Branding Guidelines: branding-guidelines.md
   - SuperAI:
