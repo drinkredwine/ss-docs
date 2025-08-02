@@ -6,6 +6,7 @@ repo_name: drinkredwine/ss-docs
 
 # Standard docs directory structure
 docs_dir: docs
+site_dir: docs-site
 
 theme:
   name: material
