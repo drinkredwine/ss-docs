@@ -194,13 +194,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add SuperScale signature to console
   console.log(`
-    ╔══════════════════════════════════════╗
-    ║              SuperScale              ║
-    ║        The success engine for games  ║
-    ║                                      ║
-    ║    Dynamic • Precise • Warm • Assured║
-    ╚══════════════════════════════════════╝
-    `);
+     ╔══════════════════════════════════════╗
+     ║              SuperScale              ║
+     ║        The success engine for games  ║
+     ╚══════════════════════════════════════╝
+     `);
 });
 
 // Progressive enhancement for modern browsers
