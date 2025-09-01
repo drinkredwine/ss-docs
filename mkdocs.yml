@@ -1,5 +1,5 @@
-site_name: Superscale Documentation
-site_description: Comprehensive SaaS platform for managing and optimizing your digital products
+site_name: SuperScale Documentation
+site_description: The success engine for games - Maximize the earning power of mobile games
 site_url: https://drinkredwine.github.io/ss-docs
 repo_url: https://github.com/drinkredwine/ss-docs
 repo_name: drinkredwine/ss-docs
@@ -10,20 +10,21 @@ site_dir: docs-site
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
-    # Palette toggle for light mode
+    # SuperScale Brand Light Mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: blue
+      primary: deep purple
+      accent: purple
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
+    # SuperScale Brand Dark Mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: blue
+      primary: deep purple
+      accent: purple
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -32,10 +33,22 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.indexes
     - search.highlight
     - search.share
+    - search.suggest
     - toc.follow
+    - toc.integrate
     - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  font:
+    text: Inter
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
 
 plugins:
   - search
@@ -51,6 +64,11 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
   - tables
   - toc:
       permalink: true
@@ -155,7 +173,33 @@ nav:
     - VC Investor Pitch: vc-investor-pitch.md
     - Superscale Analysis: superscale-analysis.md
 
+extra_css:
+  - stylesheets/superscale.css
+
+extra_javascript:
+  - javascripts/superscale.js
+
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-username/ss-docs
+      link: https://github.com/drinkredwine/ss-docs
+      name: SuperScale on GitHub
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            <a href="https://github.com/drinkredwine/ss-docs/issues/new" target="_blank" rel="noopener">telling us what you found</a>.
+
+# SuperScale brand information
+site_author: SuperScale
+copyright: "Copyright &copy; 2024 SuperScale - The success engine for games"

@@ -1,0 +1,592 @@
+/* SuperScale Brand Styling for MkDocs
+ * Following SuperScale brand guidelines exactly
+ * Colors, typography, and visual elements as specified
+ */
+
+/* Import TT Norms Pro Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+
+/* CSS Variables for SuperScale Brand Colors */
+:root {
+  /* Primary Colors */
+  --ss-rich-black: #292929;
+  --ss-purple: #4A3CC7;
+  --ss-red: #FF5D63;
+  --ss-yellow: #DFFA6E;
+  --ss-blue: #3860F0;
+  --ss-mint: #BAF8D8;
+  --ss-lilac: #9C8AEB;
+  --ss-white: #FFFFFF;
+  
+  /* Secondary Colors */
+  --ss-gray-dark: #343434;
+  --ss-gray-medium: #484848;
+  --ss-gray-light-1: #D1D1D1;
+  --ss-gray-light-2: #DBDBDB;
+  --ss-gray-light-3: #EAEAEA;
+  --ss-gray-light-4: #F1F1F1;
+  
+  /* Typography */
+  --ss-font-family: 'Inter', 'TT Norms Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ss-letter-spacing-tight: -0.02em;
+  --ss-letter-spacing-normal: -0.005em;
+  --ss-line-height-base: 1.4;
+  
+  /* SuperShadow angle */
+  --ss-shadow-angle: 63deg;
+}
+
+/* Base Typography Override */
+html {
+  font-family: var(--ss-font-family) !important;
+  letter-spacing: var(--ss-letter-spacing-tight);
+}
+
+body {
+  font-family: var(--ss-font-family) !important;
+  color: var(--ss-rich-black);
+  line-height: var(--ss-line-height-base);
+  letter-spacing: var(--ss-letter-spacing-normal);
+  padding-top: 64px; /* Account for fixed header height */
+}
+
+/* Header Styling */
+.md-header {
+  background-color: var(--ss-white) !important;
+  color: var(--ss-rich-black) !important;
+  border-bottom: 2px solid var(--ss-gray-light-3);
+  box-shadow: 0 4px 12px rgba(41, 41, 41, 0.08);
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.md-header__title {
+  color: var(--ss-rich-black) !important;
+  font-weight: 900 !important;
+  letter-spacing: var(--ss-letter-spacing-tight);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Ensure header title doesn't overflow on mobile */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.md-header__title {
+  flex: 1;
+  min-width: 0; /* Allow flex items to shrink below their content size */
+}
+
+/* Fix navigation overlay issues on mobile */
+.md-nav--primary .md-nav__title {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent header title from overlapping with navigation drawer */
+.md-nav--primary .md-nav__title[for="__drawer"] {
+  background-color: var(--ss-white);
+  border-bottom: 1px solid var(--ss-gray-light-3);
+  box-shadow: 0 2px 4px rgba(41, 41, 41, 0.05);
+}
+
+/* Navigation Styling */
+.md-nav {
+  font-family: var(--ss-font-family) !important;
+}
+
+.md-nav__title {
+  color: var(--ss-rich-black) !important;
+  font-weight: 700 !important;
+  letter-spacing: var(--ss-letter-spacing-tight);
+}
+
+.md-nav__link {
+  color: var(--ss-gray-medium) !important;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.md-nav__link:hover,
+.md-nav__link:focus {
+  color: var(--ss-purple) !important;
+}
+
+.md-nav__link--active {
+  color: var(--ss-purple) !important;
+  font-weight: 500 !important;
+}
+
+/* Sidebar Styling */
+.md-sidebar {
+  background-color: var(--ss-white);
+}
+
+.md-sidebar--primary {
+  border-right: 1px solid var(--ss-gray-light-3);
+}
+
+/* Main Content Area */
+.md-main__inner {
+  background-color: var(--ss-white);
+}
+
+.md-content {
+  background-color: var(--ss-white);
+}
+
+.md-content__inner {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Typography Hierarchy */
+h1 {
+  color: var(--ss-rich-black) !important;
+  font-weight: 900 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: var(--ss-letter-spacing-tight) !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1.5rem !important;
+  position: relative;
+}
+
+/* Hide header link symbols */
+h1 .headerlink,
+h2 .headerlink,
+h3 .headerlink {
+  display: none;
+}
+
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink {
+  display: inline-block;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+h2 {
+  color: var(--ss-rich-black) !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  letter-spacing: var(--ss-letter-spacing-tight) !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 2px solid var(--ss-purple);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--ss-purple) !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+h4 {
+  color: var(--ss-gray-dark) !important;
+  font-weight: 500 !important;
+  font-size: 1.25rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* SuperShadow Elements */
+.ss-supershadow {
+  position: relative;
+  overflow: hidden;
+}
+
+.ss-supershadow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(var(--ss-shadow-angle), transparent 49%, var(--ss-gray-light-4) 49%, var(--ss-gray-light-4) 51%, transparent 51%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hero Section with SuperShadow */
+.md-typeset h1:first-of-type {
+  background: linear-gradient(135deg, var(--ss-white) 0%, var(--ss-gray-light-4) 100%);
+  padding: 2rem;
+  border-radius: 14px;
+  margin: -1rem -1rem 2rem -1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.md-typeset h1:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(var(--ss-shadow-angle), transparent 48%, rgba(156, 138, 235, 0.1) 48%, rgba(156, 138, 235, 0.1) 52%, transparent 52%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.md-typeset h1:first-of-type * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card Grid Styling */
+.grid.cards,
+.grid.cards ul,
+.md-typeset .grid.cards {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin: 2rem 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.grid.cards > *,
+.grid.cards li,
+.md-typeset .grid.cards li {
+  background: var(--ss-white);
+  border: 1px solid var(--ss-gray-light-3);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+.grid.cards > *:hover,
+.grid.cards li:hover,
+.md-typeset .grid.cards li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(74, 60, 199, 0.15);
+  border-color: var(--ss-purple);
+}
+
+.grid.cards > *::before,
+.grid.cards li::before,
+.md-typeset .grid.cards li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ss-purple), var(--ss-lilac));
+}
+
+/* Alternative fallback for when markdown doesn't process properly */
+.grid.cards p,
+.md-typeset .grid.cards p {
+  margin: 0.5rem 0;
+}
+
+.grid.cards strong,
+.md-typeset .grid.cards strong {
+  color: var(--ss-purple);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.grid.cards hr,
+.md-typeset .grid.cards hr {
+  border: none;
+  border-top: 2px solid var(--ss-gray-light-3);
+  margin: 1rem 0;
+}
+
+.grid.cards a,
+.md-typeset .grid.cards a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--ss-purple) !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.grid.cards a:hover,
+.md-typeset .grid.cards a:hover {
+  color: var(--ss-blue) !important;
+  transform: translateX(4px);
+}
+
+/* Links and Buttons */
+a {
+  color: var(--ss-purple) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--ss-blue) !important;
+  text-decoration: underline;
+}
+
+/* Code Blocks */
+.md-typeset code {
+  background-color: var(--ss-gray-light-4) !important;
+  color: var(--ss-rich-black) !important;
+  border: 1px solid var(--ss-gray-light-3);
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.md-typeset pre {
+  background-color: var(--ss-gray-light-4) !important;
+  border: 1px solid var(--ss-gray-light-3);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(41, 41, 41, 0.05);
+}
+
+/* Tables */
+.md-typeset table {
+  border: 1px solid var(--ss-gray-light-3);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(41, 41, 41, 0.05);
+}
+
+.md-typeset th {
+  background: linear-gradient(135deg, var(--ss-purple), var(--ss-lilac));
+  color: var(--ss-white) !important;
+  font-weight: 700;
+  letter-spacing: var(--ss-letter-spacing-tight);
+}
+
+.md-typeset td {
+  border-color: var(--ss-gray-light-3);
+}
+
+.md-typeset tbody tr:nth-child(even) {
+  background-color: rgba(74, 60, 199, 0.03);
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(41, 41, 41, 0.08);
+  overflow: hidden;
+}
+
+.md-typeset .admonition.note {
+  background: linear-gradient(135deg, rgba(56, 96, 240, 0.05), rgba(186, 248, 216, 0.05));
+  border-left: 4px solid var(--ss-blue);
+}
+
+.md-typeset .admonition.warning {
+  background: linear-gradient(135deg, rgba(255, 93, 99, 0.05), rgba(223, 250, 110, 0.05));
+  border-left: 4px solid var(--ss-red);
+}
+
+.md-typeset .admonition.tip {
+  background: linear-gradient(135deg, rgba(186, 248, 216, 0.05), rgba(156, 138, 235, 0.05));
+  border-left: 4px solid var(--ss-mint);
+}
+
+/* Search */
+.md-search__input {
+  background-color: var(--ss-gray-light-4) !important;
+  border: 1px solid var(--ss-gray-light-3);
+  border-radius: 8px;
+  color: var(--ss-rich-black) !important;
+}
+
+.md-search__input:focus {
+  border-color: var(--ss-purple);
+  box-shadow: 0 0 0 2px rgba(74, 60, 199, 0.2);
+}
+
+/* Search Icons - Fix dark background/corner issues */
+.md-search__icon {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.md-search__icon:hover {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.md-search__icon:focus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Ensure search form elements have clean styling */
+.md-search__form {
+  background: transparent !important;
+}
+
+.md-search__options {
+  background: transparent !important;
+}
+
+/* Footer */
+.md-footer {
+  background: linear-gradient(135deg, var(--ss-rich-black), var(--ss-gray-dark)) !important;
+  color: var(--ss-white) !important;
+}
+
+.md-footer-meta {
+  background: var(--ss-gray-dark) !important;
+}
+
+/* Tabs */
+.md-tabs {
+  background: linear-gradient(135deg, var(--ss-white), var(--ss-gray-light-4)) !important;
+  border-bottom: 2px solid var(--ss-gray-light-3);
+  position: fixed !important;
+  top: 64px !important; /* Position below fixed header */
+  z-index: 999 !important;
+  width: 100% !important;
+}
+
+.md-tabs__link {
+  color: var(--ss-gray-medium) !important;
+  font-weight: 500;
+  letter-spacing: var(--ss-letter-spacing-normal);
+}
+
+.md-tabs__link--active {
+  color: var(--ss-purple) !important;
+  font-weight: 700;
+  border-bottom: 2px solid var(--ss-purple);
+}
+
+/* Adjust body padding when tabs are present */
+.md-tabs ~ .md-main {
+  margin-top: 48px; /* Additional margin for tabs */
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .grid.cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Fix mobile header title truncation */
+  .md-header__title {
+    font-size: 0.9rem !important;
+    max-width: calc(100vw - 180px); /* Leave space for menu button and other elements */
+  }
+  
+  /* Ensure drawer doesn't overlap with fixed header */
+  .md-overlay {
+    top: 64px; /* Adjust based on header height */
+  }
+  
+  /* Fix navigation drawer positioning */
+  .md-nav--primary {
+    top: 0;
+  }
+  
+  /* Prevent header collision on scroll */
+  .md-header[data-md-state="shadow"] {
+    box-shadow: 0 4px 12px rgba(41, 41, 41, 0.12);
+  }
+}
+
+/* Additional mobile fix for very small screens */
+@media screen and (max-width: 480px) {
+  .md-header__title {
+    font-size: 0.8rem !important;
+    max-width: calc(100vw - 120px);
+  }
+  
+  /* Keep logo on very small screens but make it smaller */
+  .md-header__title::before {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: white !important;
+    color: var(--ss-rich-black) !important;
+  }
+  
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none !important;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+*:focus {
+  outline: 2px solid var(--ss-purple);
+  outline-offset: 2px;
+}
+
+/* Animation utilities */
+.ss-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brand accent elements */
+.ss-accent-purple { color: var(--ss-purple) !important; }
+.ss-accent-red { color: var(--ss-red) !important; }
+.ss-accent-blue { color: var(--ss-blue) !important; }
+.ss-accent-mint { color: var(--ss-mint) !important; }
+.ss-accent-yellow { color: var(--ss-yellow) !important; }
+
+.ss-bg-purple { background-color: var(--ss-purple) !important; }
+.ss-bg-red { background-color: var(--ss-red) !important; }
+.ss-bg-blue { background-color: var(--ss-blue) !important; }
+.ss-bg-mint { background-color: var(--ss-mint) !important; }
+.ss-bg-yellow { background-color: var(--ss-yellow) !important; }

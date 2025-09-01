@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+<!-- SuperScale Custom Template Override -->
+
+{% block site_meta %} {{ super() }}
+<meta name="author" content="SuperScale" />
+<meta
+  name="description"
+  content="SuperScale Documentation - The success engine for games. Maximize the earning power of mobile games."
+/>
+<meta
+  name="keywords"
+  content="SuperScale, mobile games, analytics, optimization, revenue, gaming"
+/>
+<meta property="og:title" content="SuperScale Documentation" />
+<meta
+  property="og:description"
+  content="The success engine for games - Maximize the earning power of mobile games"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ config.site_url }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SuperScale Documentation" />
+<meta
+  name="twitter:description"
+  content="The success engine for games - Maximize the earning power of mobile games"
+/>
+{% endblock %} {% block htmltitle %} {% if page.title and not page.is_homepage
+%}
+<title>{{ page.title | striptags }} - SuperScale Documentation</title>
+{% else %}
+<title>{{ config.site_name }}</title>
+{% endif %} {% endblock %} {% block header %} {{ super() }}
+<style>
+  /* Additional SuperScale header styling with logo */
+  .md-header__title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .md-header__title::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url("../assets/superscale-logo-dark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+  }
+
+  /* Mobile header title adjustment */
+  @media screen and (max-width: 480px) {
+    .md-header__title::before {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.15rem;
+    }
+
+    .md-header__title {
+      gap: 0.25rem !important;
+    }
+  }
+
+  /* Very small screens - keep logo but smaller */
+  @media screen and (max-width: 320px) {
+    .md-header__title::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+</style>
+{% endblock %} {% block footer %}
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        <div class="md-footer-copyright__highlight">
+          SuperScale - The success engine for games
+        </div>
+        {{ config.copyright }}
+      </div>
+      {% if config.extra.social %}
+      <div class="md-footer-social">
+        {% for social in config.extra.social %}
+        <a
+          href="{{ social.link }}"
+          target="_blank"
+          rel="noopener"
+          title="{{ social.name or 'Link' }}"
+          class="md-footer-social__link"
+        >
+          {% include ".icons/" ~ social.icon ~ ".svg" %}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</footer>
+{% endblock %}

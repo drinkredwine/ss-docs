@@ -1,58 +1,64 @@
-# Welcome to Superscale Documentation
+# Welcome to SuperScale Documentation
 
-Superscale is a comprehensive SaaS platform for managing and optimizing your digital products across multiple projects.
+<div class="ss-supershadow" markdown>
+
+**SuperScale** is the success engine for games - a comprehensive SaaS platform designed to **maximize the earning power of mobile games** across multiple projects.
+
+</div>
+
+
 
 ## Quick Navigation
 
 <div class="grid cards" markdown>
 
--   :material-robot:{ .lg .middle } **SuperAI**
+-   :material-robot:{ .lg .middle .ss-accent-purple } **SuperAI**
 
     ---
 
     AI-powered agent platform with chat, workflows, and automation
 
-    [:octicons-arrow-right-24: Getting started](super-ai/README.md)
+    [Getting started :octicons-arrow-right-24:](super-ai/README.md)
 
--   :material-chart-line:{ .lg .middle } **Marketing Hub**
+-   :material-chart-line:{ .lg .middle .ss-accent-blue } **Marketing Hub**
 
     ---
 
     User acquisition and marketing analytics
 
-    [:octicons-arrow-right-24: Explore](marketing-hub/README.md)
+    [Explore :octicons-arrow-right-24:](marketing-hub/README.md)
 
--   :material-gamepad-variant:{ .lg .middle } **Product Hub**
+-   :material-gamepad-variant:{ .lg .middle .ss-accent-red } **Product Hub**
 
     ---
 
     Product management and optimization
 
-    [:octicons-arrow-right-24: Learn more](product-hub/README.md)
+    [Learn more :octicons-arrow-right-24:](product-hub/README.md)
 
--   :material-database-check:{ .lg .middle } **Data Health**
+-   :material-database-check:{ .lg .middle .ss-accent-mint } **Data Health**
 
     ---
 
     Data quality monitoring and validation
 
-    [:octicons-arrow-right-24: Monitor](data-health/README.md)
+    [Monitor :octicons-arrow-right-24:](data-health/README.md)
 
--   :material-pipe:{ .lg .middle } **Data Core**
+-   :material-pipe:{ .lg .middle .ss-accent-lilac } **Data Core**
 
     ---
 
     Pipeline management and workflow automation
 
-    [:octicons-arrow-right-24: Automate](data-core/README.md)
+    [Automate :octicons-arrow-right-24:](data-core/README.md)
 
--   :material-book:{ .lg .middle } **Glossary**
+-   :material-book:{ .lg .middle .ss-accent-yellow } **Glossary**
 
     ---
 
     Key metrics and terminology used throughout the platform
 
-    [:octicons-arrow-right-24: Reference](glossary.md)
+    [Reference :octicons-arrow-right-24:](glossary.md)
 
 </div>
 
