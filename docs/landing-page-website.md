@@ -2,7 +2,7 @@
 
 ## Website Architecture & Structure
 
-### Primary Landing Page: superscale.ai
+### Primary Landing Page: superscale.com
 
 #### Navigation Menu
 - **Product** (Dropdown: Marketing Hub, Product Hub, SuperAI, Data Health, Processing Core)
@@ -342,7 +342,7 @@ We offer a 30-day money-back guarantee. If you don't see measurable value within
 **[Schedule Demo]** | **[Talk to Expert]** | **[Calculate ROI]**
 
 ### Contact Information
-**Questions? Call +1 (555) 123-SCALE or email hello@superscale.ai**
+**Questions? Call +1 (555) 123-SCALE or email hello@superscale.com**
 
 ---
 
